@@ -89,7 +89,7 @@
 .cover {
   position: relative;
   padding: 165px 50px 50px 50px;
-  background-image: url(/images/cover.jpg);
+  background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;  
@@ -110,24 +110,19 @@
   letter-spacing: 30px;
   text-transform: uppercase;
 }
- .aligned-text { /* ОНО */
-  position: relative;
-  display: flex;
-  align-items: center;
-  align-content: flex-start;
-  line-height: 115%; /* 115px */
+
+.aligned-text_left {  /* ОНО */
+  line-height: 115%;
 }
 
 .aligned-text_center { /* ТЕБЕ */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align:center;
 }
 
-.aligned-text_right{ /* НАДО */
+.aligned-text_right { /* НАДО */
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: end;
+  align-content: start;
 }
 
 .letter-spacing-extended{
@@ -164,8 +159,8 @@
 
 .bet-button {
   flex-shrink: 0;
-  width: 257px;
-  height: 52px;
+  min-width: 257px;
+  min-height: 52px;
   border: 1px solid #FFF;
   color: #FFF;
   font-family: 'Raleway';
@@ -205,7 +200,7 @@
   flex-direction: column; 
   justify-content: space-between;
   width: 430px;
-  height: 450px;
+  min-height: 450px;
   padding: 50px 40px;
   text-underline-offset: 3.5px;
   background-repeat: no-repeat;
@@ -219,11 +214,12 @@
 
 .lots__card-list {  
   display: flex;
+  flex-wrap:wrap;
   flex-grow: 1;
   justify-content: center;
   gap: 25px;
   width: 100%;
-  list-style: none;
+  list-style: none;  
 }
 
 .card__title {
@@ -246,15 +242,15 @@
 }
 
 .card_type_film {
-  background-image: url(/images/card-lot-01.jpg);  
+  background-image: url(../images/card-lot-01.jpg);  
 }
 
 .card_type_book {
-  background-image: url(/images/card-lot-02.jpg);
+  background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
-  background-image: url(/images/card-lot-03.jpg);  
+  background-image: url(../images/card-lot-03.jpg);  
 }
 
 .card__text {
@@ -331,13 +327,13 @@
   grid-column: 2/4;
   grid-row: 2/4;
   align-items: flex-start;
-  gap: 28.5px;
+  gap: 28.6px;
   color: #000;
   font-family: 'Raleway';
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  line-height: normal;    
+  line-height: 23.3px;     
 }
 
 /* 5. Блок Footer */
@@ -346,19 +342,7 @@
 .footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 83px 50px 90px 50px;
-}
-
-.footer__address {
-  display: flex;
-  flex-direction: column;
-  color: #000;
-  font-family: 'Raleway';
-  font-weight: 400;
-  font-size: 18px;
-  font-style: normal;  
-  line-height: 24.3px; /* 135% */
-  text-underline-offset: 4.5px;
+  padding: 85px 50px 90px 50px;
 }
 
 .footer__menu {
@@ -368,12 +352,12 @@
 }
 
 .footer__menu-list {
-  text-align: center;
-  list-style-type: none;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
+  text-align: center;
+  list-style-type: none;
 }
 
 .footer__social-list {
@@ -383,8 +367,8 @@
   list-style-type: none; /* Убрал маркер*/
 }
 
-.footer__social-icon {   
+.footer__social-icon {
+  flex-shrink: 0;   
   height: 48px;
-  flex-shrink: 0;
 }
 
