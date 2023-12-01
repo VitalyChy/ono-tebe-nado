@@ -1,1 +1,335 @@
-/* место для вашего кода */
+/* 1. Блок Header */
+/* 2. Блок Cover */
+/* 3. Блок Lots */
+/* 4. Блок About */
+
+/* 1. Блок Header */
+/* Блок Menu__Header */
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 92px 49px 96px 51px;
+}
+
+.header__menu {
+  justify-self: start;
+  align-self: center;
+  margin: 2px;
+  text-underline-offset: 6px;    
+}
+
+.header__links-list {
+  display: flex;
+  gap: 33px;
+  color: #000;
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 18px;  
+  list-style-type: circle; /* Сделал маркер "Главная" пустым */
+}
+
+.header__links-list-item_no-bullit {
+  list-style-type: none; /* Убрал маркер "Главная" */
+}
+
+/* Блок Logo__Header */
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo-image {
+  width: 148px;
+  height: 105px;
+  background-size:contain;
+  background-position: center;
+}
+
+/* Блок Address__Header */
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+  width: 240px;
+  color: #000;
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;  
+  line-height: 24.3px; /* 135% */
+}
+
+.header__address {
+  justify-self: end;
+}
+
+/* 2. Блок Cover */
+/* Блок Overlay */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Блок Cover__Title */
+.cover {
+  position: relative;
+  padding: 165px 50px 50px 50px;
+  background-image: url(/images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  
+}
+
+.cover__title {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  padding-bottom: 135px;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 100px;
+  font-style: normal;
+  line-height: 100%; /* 100px */
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+ .aligned-text { /* ОНО */
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  line-height: 115%; /* 115px */
+}
+
+.aligned-text_center { /* ТЕБЕ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aligned-text_right{ /* НАДО */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.letter-spacing-extended{
+  letter-spacing: 60px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;  
+}
+
+/* Блок Cover__Description */
+
+.cover__description {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 78px;
+
+}
+
+.cover__description-text {  
+  color: #FFF;
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 22px;
+  font-style: normal;
+  line-height: 28px; /* 127.273% */
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 18px;  
+}
+
+.bet-button {
+  flex-shrink: 0;
+  width: 257px;
+  height: 52px;
+  border: 1px solid #FFF;
+  color: #FFF;
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 22px;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+/* 3. Блок Lots */
+
+.lots {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;  
+  justify-content: center;
+  margin: 180px 50px 90px 50px;  
+}
+
+.lots__heading {
+  padding: 0 0 27px 40px;
+  color: #000;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  width: 430px;
+  height: 450px;
+  padding: 50px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.lots__card-list {  
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  list-style: none;
+}
+
+.card__title {
+  position: relative;
+  z-index: 2;
+  color: #FFF;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 22px;
+  font-style: normal;
+  line-height: 120%; /* 26.4px */   
+  text-align: left;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.lots__card-list-item {
+  flex: 1 1 430px;
+  min-height: 450px;
+}
+
+.card_type_film {
+  background-image: url(/images/card-lot-01.jpg);  
+}
+
+.card_type_book {
+  background-image: url(/images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(/images/card-lot-03.jpg);  
+}
+
+.card__text {
+  z-index: 2;
+  color: #FFF;
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 120%; /* 24px */
+}
+
+.lots__look-more-link {
+  padding: 30px 0 2px 40px;
+  color: #000;
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+}
+
+/* 4. Блок About */
+
+.about {
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 25px;
+  padding: 91px 50px 90px 50px;  
+}
+
+.about__logo {
+  display: flex;
+  flex-shrink: 0;  
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-content: center;
+  align-content: center;
+  width: 240px;
+  height: 240px;
+  margin: 0 95px;
+  border-radius: 50%;
+  background-color:#000;
+}
+
+.about__logo-image {
+  width: 148px;
+  height: 114px;
+}
+
+.about__title {
+  flex-shrink: 0;
+  grid-column: 2/4;
+  grid-row: 1/2;
+  align-self: center;
+  padding-top: 100px;
+  padding-bottom: 100px; 
+  color: #000;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.about__text {
+  display: flex;   
+  flex-direction: column;
+  grid-column: 2/4;
+  grid-row: 2/4;
+  align-items: flex-start;
+  gap: 25px;
+  color: #000;
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+}
